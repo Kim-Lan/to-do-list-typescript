@@ -10,7 +10,7 @@ const initApp = (): void => {
   const newItemForm = document.getElementById('newItemForm') as HTMLFormElement;
   newItemForm.addEventListener('submit', (event: SubmitEvent): void => {
     event.preventDefault();
-    
+
     const newItemElement = document.getElementById('newItem') as HTMLInputElement;
     const newItemDescription: string = newItemElement.value.trim();
     if (!newItemDescription.length) return;
@@ -20,6 +20,8 @@ const initApp = (): void => {
     const newItem: ListItem = new ListItem(newItemId.toString(), newItemDescription);
     toDoList.addItem(newItem);
     template.render(toDoList);
+
+    newItemElement.value = '';
   });
 
   const clearButton = document.getElementById('clearButton') as HTMLButtonElement;
