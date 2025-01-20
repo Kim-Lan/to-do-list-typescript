@@ -1,13 +1,13 @@
 export interface Item {
   id: string,
-  item: string,
+  description: string,
   checked: boolean,
 }
 
 export default class ListItem implements Item {
   constructor(
     private _id: string = '',
-    private _item: string = '',
+    private _description: string = '',
     private _checked: boolean = false,
   ) {}
 
@@ -19,12 +19,12 @@ export default class ListItem implements Item {
     this._id = id;
   }
 
-  get item(): string {
-    return this._item;
+  get description(): string {
+    return this.description;
   }
 
-  set item(item: string) {
-    this._item = item;
+  set description(description: string) {
+    this._description = description;
   }
 
   get checked(): boolean {
