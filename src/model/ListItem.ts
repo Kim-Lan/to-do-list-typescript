@@ -20,7 +20,7 @@ export default class ListItem implements Item {
   }
 
   get description(): string {
-    return this.description;
+    return this._description;
   }
 
   set description(description: string) {

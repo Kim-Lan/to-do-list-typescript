@@ -24,6 +24,7 @@ export default class ListTemplate implements DOMList {
 
     toDoList.list.forEach(item => {
       const liElement = document.createElement('li') as HTMLLIElement;
+      liElement.className = 'item';
 
       const checkboxElement = document.createElement('input') as HTMLInputElement;
       checkboxElement.type = 'checkbox';
@@ -44,6 +45,7 @@ export default class ListTemplate implements DOMList {
 
       const deleteButton = document.createElement('button') as HTMLButtonElement;
       deleteButton.textContent = 'X';
+      deleteButton.className = 'button';
       liElement.appendChild(deleteButton);
 
       deleteButton.addEventListener('click', () => {
