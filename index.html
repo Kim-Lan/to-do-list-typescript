@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>To-Do List</h1>
+      </header>
+
+      <section>
+        <form id="newItemForm">
+          <input id="newItem" type="text" placeholder="Enter new to-do item" />
+          <button id="addItem" title="Add new item" aria-label="Add new item to list">+</button>
+        </form>
+      </section>
+
+      <section>
+        <button id="clearButton" title="Clear list" aria-label="Remove all items from list">Clear</button>
+        <ul id="listItems">
+
+        </ul>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
